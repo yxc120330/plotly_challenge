@@ -2,8 +2,6 @@
 
 // Use D3 to read the JSON file
 d3.json("samples.json").then((dataset) => {
-    window.dataset = dataset;
-    console.log(dataset);
     var data = dataset;
   
     // Add ID#s to dropdown menu
@@ -107,7 +105,6 @@ d3.json("samples.json").then((dataset) => {
       // Gauge chart
   
       var trace3 = [{
-        //domain: {x: [0, 1], y: [0,1]},
         type: "indicator",
         mode: "gauge+number",
         value: washFrequency,
